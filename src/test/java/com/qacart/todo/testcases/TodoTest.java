@@ -1,16 +1,15 @@
 package com.qacart.todo.testcases;
 
+import com.qacart.todo.base.BaseTest;
 import com.qacart.todo.factory.DriverFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TodoTest {
-    private WebDriver driver;
+public class TodoTest extends BaseTest {
     @Test
     public void shouldBeAbleToAddNewTodo () {
-       driver = new DriverFactory().initializeDrive();
+
         driver.get("https://qacart-todo.herokuapp.com/login");
 
         driver.findElement(By.cssSelector("[data-testid=\"email\"]")).sendKeys("madrane9@hotmail.com");
@@ -19,10 +18,9 @@ public class TodoTest {
         driver.findElement(By.cssSelector("[data-testid=\"add\"]")).click();
         driver.findElement(By.cssSelector("[data-testid=\"new-todo\"]")).sendKeys("Learn Selenium");
         driver.findElement(By.cssSelector("[data-testid=\"submit-newTask\"]")).click();
-
         String actualResult = driver.findElement(By.cssSelector("[data-testid=\"todo-item\"]")).getText();
         Assert.assertEquals(actualResult, "Learn Selenium");
-        driver.quit();
+
     }
         @Test
         public void shouldBeAbleToDeleteTodo() {
