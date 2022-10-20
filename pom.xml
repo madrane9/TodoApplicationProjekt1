@@ -47,5 +47,23 @@
       <version>7.5</version>
       <scope>test</scope>
     </dependency>
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-safari-driver</artifactId>
+          <version>4.1.4</version>
+          <scope>test</scope>
+      </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-firefox-driver</artifactId>
+      <version>4.1.4</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-edge-driver</artifactId>
+          <version>4.1.4</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
 </project>
