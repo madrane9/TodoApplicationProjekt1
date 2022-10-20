@@ -1,7 +1,8 @@
 package com.qacart.todo.testcases;
 
 import com.qacart.todo.base.BaseTest;
-import org.openqa.selenium.By;
+import com.qacart.todo.pages.LoginPage;
+import com.qacart.todo.pages.TodoPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,12 +10,16 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void ShouldBeAbleToLoginWithEmailAndPassword (){
+        LoginPage loginpage =  new LoginPage(driver);
+        loginpage.load();
+        /* Diese 2 CodeLinien kann man zusammenfassen in einer Code-Linie:
+        loginpage.setEmail("madrane9@hotmail.com");
+        loginpage.setPassword("madrane9");
+        */
+         loginpage.login("madrane9@hotmail.com", "madrane9");
 
-        driver.get("https://qacart-todo.herokuapp.com/login");
-        driver.findElement(By.cssSelector("[data-testid=\"email\"]")).sendKeys("madrane9@hotmail.com");
-        driver.findElement(By.cssSelector("[data-testid=\"password\"]")).sendKeys("madrane9");
-        driver.findElement(By.cssSelector("[data-testid=\"submit\"]")).click();
-        boolean isWelcomeDisplayed = driver.findElement(By.cssSelector("[data-testid=\"welcome\"]")).isDisplayed();
+        TodoPage todoPage = new TodoPage(driver);
+        boolean isWelcomeDisplayed = todoPage.iswelcomeMessageDisplayed();
         Assert.assertTrue(isWelcomeDisplayed);
 
 
