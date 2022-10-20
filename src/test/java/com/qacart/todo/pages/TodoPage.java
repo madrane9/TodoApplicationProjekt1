@@ -32,8 +32,9 @@ public class TodoPage extends BasePage {
     public String getTodoText(){
          return driver.findElement(todoItem).getText();
     }
-    public void clickOnDeleteButton(){
+    public TodoPage clickOnDeleteButton(){
         driver.findElement(deleteButton).click();
+                return this;
     }
 
     public boolean IsNoTodosMessageDisplayed(){
