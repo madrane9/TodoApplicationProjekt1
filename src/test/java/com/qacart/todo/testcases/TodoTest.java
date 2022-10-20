@@ -18,7 +18,7 @@ public class TodoTest extends BaseTest {
         Assert.assertEquals(actualResult, "Learn Selenium");
 
     }
-        @Test
+        @Test (enabled = false)
         public void shouldBeAbleToDeleteTodo() {
             LoginPage loginpage =  new LoginPage(driver);
             boolean isNoTodoMessageDisplayed =  loginpage
