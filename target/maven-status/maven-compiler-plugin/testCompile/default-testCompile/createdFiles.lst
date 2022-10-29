@@ -7,5 +7,4 @@ com\qacart\todo\pages\LoginPage.class
 com\qacart\todo\pages\NewTodoPage.class
 com\qacart\todo\utils\ConfigUtils.class
 com\qacart\todo\testcases\TodoTest.class
-com\qacart\todo\testcases\Dummy.class
 com\qacart\todo\pages\TodoPage.class

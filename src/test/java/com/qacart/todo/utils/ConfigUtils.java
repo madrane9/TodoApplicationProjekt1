@@ -8,7 +8,17 @@ public class ConfigUtils {
     private static ConfigUtils configUtils;
 
     public ConfigUtils(){
-        properties = PropertiesUtils.loadProperties("src/test/java/com/qacart/todo/config/production.properties");
+        String env = System.getProperty("env", "production");
+        switch (env) {
+            case "PRODUCTION":
+                properties = PropertiesUtils.loadProperties("src/test/java/com/qacart/todo/config/production.properties");
+                break;
+            case "LOCAL":
+                properties = PropertiesUtils.loadProperties("src/test/java/com/qacart/todo/config/local.properties");
+                break;
+            default:
+                throw new RuntimeException("Environment is not supported");
+        }
     }
 
     public static ConfigUtils getInstance (){
@@ -22,5 +32,17 @@ public class ConfigUtils {
         String prop = properties.getProperty("baseurl");
         if(prop != null) return prop;
             throw new RuntimeException("Could not find the base url in the property file");
+    }
+
+    public  String getEmail(){
+        String prop = properties.getProperty("email");
+        if(prop != null) return prop;
+        throw new RuntimeException("Could not find the email in the property file");
+    }
+
+    public  String getPassword(){
+        String prop = properties.getProperty("password");
+        if(prop != null) return prop;
+        throw new RuntimeException("Could not find the password in the property file");
     }
 }
