@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class TodoTest extends BaseTest {
 
     @Test
-    public void shouldBeAbleToAddNewTodo () {
+    public void shouldBeAbleToAddNewTodo () throws InterruptedException {
 
         RegisterApi registerApi = new RegisterApi();
         registerApi.register();
