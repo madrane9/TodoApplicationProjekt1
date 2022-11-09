@@ -4,7 +4,7 @@ import java.util.Properties;
 
 public class ConfigUtils {
 
-    private  Properties properties;
+    private  static Properties properties;
     private static ConfigUtils configUtils;
 
     public ConfigUtils(){

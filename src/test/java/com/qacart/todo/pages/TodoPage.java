@@ -1,6 +1,8 @@
 package com.qacart.todo.pages;
 
 import com.qacart.todo.base.BasePage;
+import com.qacart.todo.config.EndPoint;
+import com.qacart.todo.utils.ConfigUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,6 +20,10 @@ public class TodoPage extends BasePage {
 
     private By noToDosMessage = By.cssSelector("[data-testid=\"no-todos\"]");
 
+    public TodoPage load(){
+        driver.get(ConfigUtils.getInstance().getBaseUrl() + EndPoint.TODO_PAGE_ENDPOINT);
+        return this;
+    }
 
     public boolean iswelcomeMessageDisplayed() {
         return driver.findElement(welcomeMessage).isDisplayed();
