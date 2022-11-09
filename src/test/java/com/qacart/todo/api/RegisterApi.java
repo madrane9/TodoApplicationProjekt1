@@ -1,35 +1,39 @@
 package com.qacart.todo.api;
 
 import com.qacart.todo.objects.User;
+import com.qacart.todo.utils.UserUtils;
 import io.restassured.http.ContentType;
-import io.restassured.http.Cookies;
+import io.restassured.http.Cookie;
 import io.restassured.response.Response;
+
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
 public class RegisterApi {
-    private Cookies restAssuredCookies;
-    private String accessToken;
-    private String userId;
-    private String firstName;
-
+    private  List<Cookie> restAssuredCookies;
+    private  String accessToken;
+    private  String userID;
+    private  String firstName;
+    public List<Cookie> getCookies(){
+        return this.restAssuredCookies;
+    }
+    public String getUserId(){
+        return this.userID;
+    }
     public String getToken(){
         return this.accessToken;
     }
-    public Cookies getCookies(){
-        return this.restAssuredCookies;
-    }
 
-    public String getUserId(){
-        return this.userId;
-    }
+
+
     public String getFirstName(){
         return this.firstName;
     }
 
 
     public void register(){
-        User user = new User("tester3","tester3", "test4@gmx.de","123456"  );
+        User user = UserUtils.generateRandomUser();
         Response response =
                 given()
                     .baseUri("https://qacart-todo.herokuapp.com")
@@ -46,9 +50,9 @@ public class RegisterApi {
             throw  new RuntimeException("Something went wrong with the request");
         }
 
-        restAssuredCookies = response.detailedCookies();
+        restAssuredCookies = response.detailedCookies().asList();
         accessToken = response.path("access_token");
-        userId = response.path(("userID"));
+        userID = response.path(("userID"));
         firstName = response.path(("firstName"));
 
     }
