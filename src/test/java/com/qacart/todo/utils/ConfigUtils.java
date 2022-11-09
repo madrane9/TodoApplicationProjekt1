@@ -4,11 +4,11 @@ import java.util.Properties;
 
 public class ConfigUtils {
 
-    private  Properties properties;
+    private  static Properties properties;
     private static ConfigUtils configUtils;
 
     public ConfigUtils(){
-        String env = System.getProperty("env", "production");
+        String env = System.getProperty("env", "PRODUCTION");
         switch (env) {
             case "PRODUCTION":
                 properties = PropertiesUtils.loadProperties("src/test/java/com/qacart/todo/config/production.properties");
@@ -29,7 +29,7 @@ public class ConfigUtils {
         return configUtils;
     }
     public  String getBaseUrl(){
-        String prop = properties.getProperty("baseurl");
+        String prop = properties.getProperty("baseUrl");
         if(prop != null) return prop;
             throw new RuntimeException("Could not find the base url in the property file");
     }
