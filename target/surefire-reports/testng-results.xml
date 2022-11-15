@@ -2,50 +2,50 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-15T12:52:32 MEZ" name="Command line suite" finished-at="2022-11-15T12:52:53 MEZ" duration-ms="21076">
+  <suite started-at="2022-11-15T13:12:53 MEZ" name="Surefire suite" finished-at="2022-11-15T13:13:18 MEZ" duration-ms="24776">
     <groups>
     </groups>
-    <test started-at="2022-11-15T12:52:32 MEZ" name="Command line test" finished-at="2022-11-15T12:52:53 MEZ" duration-ms="21076">
+    <test started-at="2022-11-15T13:12:53 MEZ" name="Surefire test" finished-at="2022-11-15T13:13:18 MEZ" duration-ms="24776">
       <class name="com.qacart.todo.testcases.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qacart.todo.testcases.LoginTest@214b199c]" started-at="2022-11-15T12:52:32 MEZ" name="setup" finished-at="2022-11-15T12:52:36 MEZ" duration-ms="4177" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qacart.todo.testcases.LoginTest@6dbb137d]" started-at="2022-11-15T13:12:54 MEZ" name="setup" finished-at="2022-11-15T13:13:03 MEZ" duration-ms="9782" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ShouldBeAbleToLoginWithEmailAndPassword()[pri:0, instance:com.qacart.todo.testcases.LoginTest@214b199c]" started-at="2022-11-15T12:52:36 MEZ" name="ShouldBeAbleToLoginWithEmailAndPassword" finished-at="2022-11-15T12:52:38 MEZ" duration-ms="2149" status="PASS">
+        <test-method signature="ShouldBeAbleToLoginWithEmailAndPassword()[pri:0, instance:com.qacart.todo.testcases.LoginTest@6dbb137d]" started-at="2022-11-15T13:13:03 MEZ" name="ShouldBeAbleToLoginWithEmailAndPassword" finished-at="2022-11-15T13:13:08 MEZ" duration-ms="4368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShouldBeAbleToLoginWithEmailAndPassword -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qacart.todo.testcases.LoginTest@214b199c]" started-at="2022-11-15T12:52:38 MEZ" name="teardown" finished-at="2022-11-15T12:52:38 MEZ" duration-ms="336" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qacart.todo.testcases.LoginTest@6dbb137d]" started-at="2022-11-15T13:13:08 MEZ" name="teardown" finished-at="2022-11-15T13:13:09 MEZ" duration-ms="1527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qacart.todo.testcases.LoginTest -->
       <class name="com.qacart.todo.testcases.TodoTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qacart.todo.testcases.TodoTest@20d3d15a]" started-at="2022-11-15T12:52:38 MEZ" name="setup" finished-at="2022-11-15T12:52:40 MEZ" duration-ms="1500" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qacart.todo.testcases.TodoTest@3c9d0b9d]" started-at="2022-11-15T13:12:54 MEZ" name="setup" finished-at="2022-11-15T13:13:03 MEZ" duration-ms="9267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="shouldBeAbleToAddNewTodo()[pri:0, instance:com.qacart.todo.testcases.TodoTest@20d3d15a]" started-at="2022-11-15T12:52:40 MEZ" name="shouldBeAbleToAddNewTodo" finished-at="2022-11-15T12:52:47 MEZ" duration-ms="6929" status="PASS">
+        <test-method signature="shouldBeAbleToAddNewTodo()[pri:0, instance:com.qacart.todo.testcases.TodoTest@3c9d0b9d]" started-at="2022-11-15T13:13:03 MEZ" name="shouldBeAbleToAddNewTodo" finished-at="2022-11-15T13:13:13 MEZ" duration-ms="10001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldBeAbleToAddNewTodo -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qacart.todo.testcases.TodoTest@20d3d15a]" started-at="2022-11-15T12:52:47 MEZ" name="teardown" finished-at="2022-11-15T12:52:47 MEZ" duration-ms="342" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qacart.todo.testcases.TodoTest@3c9d0b9d]" started-at="2022-11-15T13:13:13 MEZ" name="teardown" finished-at="2022-11-15T13:13:13 MEZ" duration-ms="525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qacart.todo.testcases.TodoTest@20d3d15a]" started-at="2022-11-15T12:52:47 MEZ" name="setup" finished-at="2022-11-15T12:52:49 MEZ" duration-ms="1832" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qacart.todo.testcases.TodoTest@3c9d0b9d]" started-at="2022-11-15T13:13:13 MEZ" name="setup" finished-at="2022-11-15T13:13:15 MEZ" duration-ms="1681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="shouldBeAbleToDeleteTodo()[pri:0, instance:com.qacart.todo.testcases.TodoTest@20d3d15a]" started-at="2022-11-15T12:52:49 MEZ" name="shouldBeAbleToDeleteTodo" finished-at="2022-11-15T12:52:52 MEZ" duration-ms="3458" status="PASS">
+        <test-method signature="shouldBeAbleToDeleteTodo()[pri:0, instance:com.qacart.todo.testcases.TodoTest@3c9d0b9d]" started-at="2022-11-15T13:13:15 MEZ" name="shouldBeAbleToDeleteTodo" finished-at="2022-11-15T13:13:18 MEZ" duration-ms="2614" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shouldBeAbleToDeleteTodo -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qacart.todo.testcases.TodoTest@20d3d15a]" started-at="2022-11-15T12:52:52 MEZ" name="teardown" finished-at="2022-11-15T12:52:53 MEZ" duration-ms="304" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qacart.todo.testcases.TodoTest@3c9d0b9d]" started-at="2022-11-15T13:13:18 MEZ" name="teardown" finished-at="2022-11-15T13:13:18 MEZ" duration-ms="537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qacart.todo.testcases.TodoTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
