@@ -1,6 +1,7 @@
 package com.qacart.todo.api;
 
 import com.qacart.todo.objects.User;
+import com.qacart.todo.utils.ConfigUtils;
 import com.qacart.todo.utils.UserUtils;
 import io.restassured.http.Cookie;
 import io.restassured.response.Response;
@@ -34,7 +35,7 @@ public class RegisterApi {
     public void register(){
         User user = UserUtils.generateRandomUser();
         Response response=given()
-                .baseUri("https://qacart-todo.herokuapp.com")
+                .baseUri(ConfigUtils.getInstance().getBaseUrl())
                 .header("Content-Type","application/json")
                 .body(user)
                 .log().all()

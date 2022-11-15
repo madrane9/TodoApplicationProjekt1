@@ -1,10 +1,10 @@
 package com.qacart.todo.testcases;
 
 import com.qacart.todo.api.RegisterApi;
+import com.qacart.todo.api.TaskApi;
 import com.qacart.todo.base.BaseTest;
-import com.qacart.todo.pages.LoginPage;
 import com.qacart.todo.pages.NewTodoPage;
-import com.qacart.todo.utils.ConfigUtils;
+import com.qacart.todo.pages.TodoPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -25,13 +25,17 @@ public class TodoTest extends BaseTest {
         Assert.assertEquals(actualResult, "Learn Selenium");
 
     }
-        @Test (enabled = false)
+        @Test ()
         public void shouldBeAbleToDeleteTodo() {
-            LoginPage loginpage =  new LoginPage(driver);
-            boolean isNoTodoMessageDisplayed =  loginpage
+            RegisterApi registerApi = new RegisterApi();
+            registerApi.register();
+            TaskApi taskApi = new TaskApi();
+            taskApi.addTask(registerApi.getToken());
+            TodoPage todoPage = new TodoPage(driver);
+            todoPage.load();
+            injectCookiesToBrowser(registerApi.getCookies());
+            boolean isNoTodoMessageDisplayed =  todoPage
                     .load()
-                    .login(ConfigUtils.getInstance().getEmail(), ConfigUtils.getInstance().getPassword())
-                    .clickOnPlusButton().adNewTask("Learn Selenium")
                     .clickOnDeleteButton()
                     .IsNoTodosMessageDisplayed();
             Assert.assertTrue(isNoTodoMessageDisplayed);
