@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -112,6 +112,11 @@
                         <a href="#" panel-name="suite-Command_line_suite" title="com.qacart.todo.testcases.TodoTest" class="method navigator-link" hash-for-method="shouldBeAbleToAddNewTodo">shouldBeAbleToAddNewTodo</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Command_line_suite" title="com.qacart.todo.testcases.TodoTest" class="method navigator-link" hash-for-method="shouldBeAbleToDeleteTodo">shouldBeAbleToDeleteTodo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Command_line_suite -->
                   </li>
                 </ul>
@@ -127,21 +132,6 @@
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.qacart.todo.testcases.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="ShouldBeAbleToLoginWithEmailAndPassword">
-                  </a> <!-- ShouldBeAbleToLoginWithEmailAndPassword -->
-                  <span class="method-name">ShouldBeAbleToLoginWithEmailAndPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
-          <div class="suite-Command_line_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">com.qacart.todo.testcases.TodoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -150,6 +140,28 @@
                   <a name="shouldBeAbleToAddNewTodo">
                   </a> <!-- shouldBeAbleToAddNewTodo -->
                   <span class="method-name">shouldBeAbleToAddNewTodo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="shouldBeAbleToDeleteTodo">
+                  </a> <!-- shouldBeAbleToDeleteTodo -->
+                  <span class="method-name">shouldBeAbleToDeleteTodo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qacart.todo.testcases.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ShouldBeAbleToLoginWithEmailAndPassword">
+                  </a> <!-- ShouldBeAbleToLoginWithEmailAndPassword -->
+                  <span class="method-name">ShouldBeAbleToLoginWithEmailAndPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -207,20 +219,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ShouldBeAbleToLoginWithEmailAndPassword')
-data.setCell(0, 2, 'com.qacart.todo.testcases.LoginTest')
-data.setCell(0, 3, 2535);
+data.setCell(0, 1, 'shouldBeAbleToAddNewTodo')
+data.setCell(0, 2, 'com.qacart.todo.testcases.TodoTest')
+data.setCell(0, 3, 6772);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'shouldBeAbleToAddNewTodo')
+data.setCell(1, 1, 'shouldBeAbleToDeleteTodo')
 data.setCell(1, 2, 'com.qacart.todo.testcases.TodoTest')
-data.setCell(1, 3, 2164);
+data.setCell(1, 3, 3381);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'ShouldBeAbleToLoginWithEmailAndPassword')
+data.setCell(2, 2, 'com.qacart.todo.testcases.LoginTest')
+data.setCell(2, 3, 2171);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -235,16 +251,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.qacart.todo.testcases.TodoTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">shouldBeAbleToDeleteTodo</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Command_line_suite" class="panel">
@@ -260,26 +269,38 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">ShouldBeAbleToLoginWithEmailAndPassword</span>
-                <span class="method-start">3375 ms</span>
+                <span class="method-start">7085 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">5912 ms</span>
+                <span class="method-start">9259 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qacart.todo.testcases.TodoTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">6892 ms</span>
+                <span class="method-start">9624 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">shouldBeAbleToAddNewTodo</span>
-                <span class="method-start">8322 ms</span>
+                <span class="method-start">11227 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">10487 ms</span>
+                <span class="method-start">18000 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">18352 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">shouldBeAbleToDeleteTodo</span>
+                <span class="method-start">20023 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">23404 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
