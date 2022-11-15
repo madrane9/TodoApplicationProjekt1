@@ -3,7 +3,7 @@ package com.qacart.todo.testcases;
 import com.qacart.todo.api.RegisterApi;
 import com.qacart.todo.base.BaseTest;
 import com.qacart.todo.pages.LoginPage;
-import com.qacart.todo.pages.TodoPage;
+import com.qacart.todo.pages.NewTodoPage;
 import com.qacart.todo.utils.ConfigUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,12 +15,11 @@ public class TodoTest extends BaseTest {
 
         RegisterApi registerApi = new RegisterApi();
         registerApi.register();
-        TodoPage todoPage = new TodoPage(driver);
-        todoPage.load();
+        NewTodoPage newTodoPage = new NewTodoPage(driver);
+        newTodoPage.load();
         injectCookiesToBrowser(registerApi.getCookies());
-        String actualResult = todoPage
+        String actualResult = newTodoPage
                 .load()
-                .clickOnPlusButton()
                 .adNewTask("Learn Selenium")
                 .getTodoText();
         Assert.assertEquals(actualResult, "Learn Selenium");
