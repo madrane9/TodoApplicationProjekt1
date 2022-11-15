@@ -11,6 +11,7 @@ com\qacart\todo\pages\NewTodoPage.class
 com\qacart\todo\testcases\TodoTest.class
 com\qacart\todo\utils\PropertiesUtils.class
 com\qacart\todo\utils\CookieUtils.class
+com\qacart\todo\config\EndPoint.class
 com\qacart\todo\utils\ConfigUtils.class
 com\qacart\todo\api\RegisterApi.class
 com\qacart\todo\pages\TodoPage.class
