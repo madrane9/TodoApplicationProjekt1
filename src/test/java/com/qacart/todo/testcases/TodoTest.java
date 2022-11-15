@@ -11,11 +11,11 @@ import org.testng.annotations.Test;
 public class TodoTest extends BaseTest {
 
     @Test
-    public void shouldBeAbleToAddNewTodo () throws InterruptedException {
+    public void shouldBeAbleToAddNewTodo ()  {
 
         RegisterApi registerApi = new RegisterApi();
         registerApi.register();
-        NewTodoPage newTodoPage = new NewTodoPage(driver);
+        NewTodoPage newTodoPage = new NewTodoPage(getDriver());
         newTodoPage.load();
         injectCookiesToBrowser(registerApi.getCookies());
         String actualResult = newTodoPage
@@ -29,10 +29,13 @@ public class TodoTest extends BaseTest {
         public void shouldBeAbleToDeleteTodo() {
             RegisterApi registerApi = new RegisterApi();
             registerApi.register();
+
             TaskApi taskApi = new TaskApi();
             taskApi.addTask(registerApi.getToken());
-            TodoPage todoPage = new TodoPage(driver);
+
+            TodoPage todoPage = new TodoPage(getDriver());
             todoPage.load();
+
             injectCookiesToBrowser(registerApi.getCookies());
             boolean isNoTodoMessageDisplayed =  todoPage
                     .load()

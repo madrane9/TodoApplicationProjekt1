@@ -10,7 +10,7 @@ public class LoginTest extends BaseTest{
 
     @Test
     public void ShouldBeAbleToLoginWithEmailAndPassword (){
-        LoginPage loginpage =  new LoginPage(driver);
+        LoginPage loginpage =  new LoginPage(getDriver());
         boolean isWelcomeDisplayed =
                 loginpage
                         .load()

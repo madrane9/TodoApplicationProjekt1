@@ -23,8 +23,8 @@
       <artifactId>maven-surefire-plugin</artifactId>
       <version>3.0.0-M7</version>
       <configuration>
-        <parallel>classes</parallel>
-        <threadCount>2</threadCount>
+        <parallel>methods</parallel>
+        <threadCount>3</threadCount>
       </configuration>
     </plugin>
     </plugins>
