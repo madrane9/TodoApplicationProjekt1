@@ -4,10 +4,15 @@ import com.qacart.todo.factory.DriverFactory;
 import com.qacart.todo.utils.CookieUtils;
 import io.qameta.allure.Step;
 import io.restassured.http.Cookie;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 
@@ -30,9 +35,14 @@ public class BaseTest {
 
     @AfterMethod
     public void teardown() {
+       File file =  ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE) ;
+        try {
+            FileUtils.copyFile(file, new File("screenshots/image1.png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         getDriver().quit();
-
-            }
+    }
     @Step
     public void injectCookiesToBrowser(List<Cookie> restAssuredCookies) {
         List<org.openqa.selenium.Cookie> seleniumCookies = CookieUtils.convertRestAssuredCookiestoSeleniumCookies(restAssuredCookies);
