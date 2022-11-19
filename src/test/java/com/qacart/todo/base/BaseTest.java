@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -34,14 +35,11 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void teardown() {
-       File file =  ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE) ;
-        try {
-            FileUtils.copyFile(file, new File("screenshots/image1.png"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        getDriver().quit();
+    public void teardown(ITestResult result) {
+        String testCaseName = result.getMethod().getMethodName();
+        File destFile = new File("target" + File.separator + "screenshots" + File.separator + testCaseName + ".png");
+        takeScreenshot(destFile);
+    getDriver().quit();
     }
     @Step
     public void injectCookiesToBrowser(List<Cookie> restAssuredCookies) {
@@ -49,6 +47,14 @@ public class BaseTest {
         for(org.openqa.selenium.Cookie cookie: seleniumCookies){
             getDriver().manage().addCookie(cookie);
 
+        }
+    }
+    public void takeScreenshot(File destFile){
+        File file =  ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE) ;
+        try {
+            FileUtils.copyFile(file, destFile);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

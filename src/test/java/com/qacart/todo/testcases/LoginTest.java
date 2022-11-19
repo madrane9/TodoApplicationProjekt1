@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest{
     @Story("Login with Email and Password")
     @Description("It will login by filling the email and the password  and navigate to the todo page ")
     @Test(description = "Test the login functionality using email and password")
-    public void ShouldBeAbleToLoginWithEmailAndPassword (){
+    public void shouldBeAbleToLoginWithEmailAndPassword (){
         LoginPage loginpage =  new LoginPage(getDriver());
         boolean isWelcomeDisplayed =
                 loginpage
