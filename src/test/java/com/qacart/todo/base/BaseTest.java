@@ -2,6 +2,7 @@ package com.qacart.todo.base;
 
 import com.qacart.todo.factory.DriverFactory;
 import com.qacart.todo.utils.CookieUtils;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import io.restassured.http.Cookie;
 import org.apache.commons.io.FileUtils;
@@ -13,7 +14,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 
@@ -53,6 +56,8 @@ public class BaseTest {
         File file =  ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE) ;
         try {
             FileUtils.copyFile(file, destFile);
+            InputStream is = new FileInputStream(destFile);
+            Allure.addAttachment("screenshot",is );
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
